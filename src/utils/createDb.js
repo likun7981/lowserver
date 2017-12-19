@@ -5,6 +5,7 @@ const Mock = require('mockjs')
 const FileSync = require('lowdb/adapters/FileSync')
 const Memory = require('lowdb/adapters/Memory')
 const lodashId = require('lodash-id')
+const mixins = require('json-server/lib/server/mixins')
 const _ = require('lodash')
 
 module.exports = function (config) {
@@ -27,5 +28,6 @@ module.exports = function (config) {
   //   __remove.apply(this, [array, item])
   // }
   db._.mixin(lodashId)
+  db._.mixin(mixins)
   return db
 }

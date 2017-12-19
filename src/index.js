@@ -23,7 +23,7 @@ function applyServer (app, name = 'lowserver.config') {
   registerBabel(name)
   let config = getConfig(resolvedFilePath)
   applyServerReal(config, app)
-  const watcher = chokidar.watch(resolvedFilePath, {
+  const watcher = chokidar.watch([resolvedFilePath, resolvedFilePath + '.js'], {
     ignored: /node_modules/,
     persistent: true
   })
@@ -79,7 +79,7 @@ function getConfig (resolvedFilePath) {
   delete require.cache[resolvedFilePath]
   delete require.cache[path.join(resolvedFilePath, 'index.js')]
   let config = {}
-  if (fs.existsSync(resolvedFilePath)) {
+  if (hasConfig(resolvedFilePath)) {
     try {
       config = require(resolvedFilePath)
       config = config.default || config
@@ -93,6 +93,12 @@ function getConfig (resolvedFilePath) {
     return config
   }
   return config
+}
+
+function hasConfig (resolvedFilePath) {
+  return (
+    fs.existsSync(resolvedFilePath) || fs.existsSync(resolvedFilePath + '.js')
+  )
 }
 
 module.exports = { applyServer, outputError }

@@ -1,6 +1,6 @@
 module.exports = function (name) {
   require('babel-register')({
-    only: new RegExp(`(${name})`),
+    only: new RegExp(`/${name}(.js)?$`),
     presets: [
       [
         'env',
