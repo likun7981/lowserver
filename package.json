@@ -1,6 +1,6 @@
 {
 	"name": "lowserver",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"description": "Easy to apply a mock server into express app.",
 	"main": "lib/index.js",
 	"scripts": {
@@ -15,7 +15,11 @@
 			"git add"
 		]
 	},
-	"keywords": ["mock", "server", "express"],
+	"keywords": [
+		"mock",
+		"server",
+		"express"
+	],
 	"author": "likun",
 	"license": "MIT",
 	"devDependencies": {
@@ -44,15 +48,15 @@
 		"mockjs": "^1.0.1-beta3",
 		"restc": "^0.2.2"
 	},
-  "bugs": {
-    "url": "https://github.com/likun7981/lowserver/issues"
-  },
+	"bugs": {
+		"url": "https://github.com/likun7981/lowserver/issues"
+	},
 	"homepage": "https://github.com/likun7981/lowserver#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/likun7981/lowserver.git"
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/likun7981/lowserver.git"
 	},
 	"directories": {
-    "lib": "lib"
-  }
+		"lib": "lib"
+	}
 }
