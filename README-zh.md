@@ -30,7 +30,7 @@ applyServer(app)
 - 在根目录创建 `lowserver-config.js` 文件
 ```
 +-- your-project
-|   +-- lowserver.config.js
+|   +-- lowserver-config.js
 |   +-- node_modules
 |   +-- package.json
 |   +-- README.md
@@ -38,7 +38,7 @@ applyServer(app)
 - 或者可以在根目录创建`lowserver-config`目录使用`index.js`导出配置
 ```
 +-- your-project
-|   +-- lowserver.config
+|   +-- lowserver-config
 |   |	+-- index.js
 |   +-- node_modules
 |   +-- package.json
