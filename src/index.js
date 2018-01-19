@@ -18,7 +18,7 @@ const urls = require('./urls')
 let error = null
 let clearOldRouter = null
 
-function applyServer (app, name = 'lowserver.config') {
+function applyServer (app, name = 'lowserver-config') {
   const resolvedFilePath = path.join(appPath, name)
   registerBabel(name)
   let config = getConfig(resolvedFilePath)
