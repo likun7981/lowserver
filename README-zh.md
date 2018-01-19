@@ -27,7 +27,7 @@ applyServer(app)
 ### 创建配置文件
 > 提醒: 你可以使用es6
 
-- 在根目录创建 `lowserver.config.js` 文件
+- 在根目录创建 `lowserver-config.js` 文件
 ```
 +-- your-project
 |   +-- lowserver.config.js
@@ -35,7 +35,7 @@ applyServer(app)
 |   +-- package.json
 |   +-- README.md
 ```
-- 或者可以在根目录创建`lowserver.config`目录使用`index.js`导出配置
+- 或者可以在根目录创建`lowserver-config`目录使用`index.js`导出配置
 ```
 +-- your-project
 |   +-- lowserver.config
@@ -76,7 +76,7 @@ export default {
 
 #### 例子
 
-* 如果你需要 mock 一个支持 restful 接口配置 lowserver.config.js 文件可以这样写
+* 如果你需要 mock 一个支持 restful 接口配置 lowserver-config.js 文件可以这样写
 
 > 这个功能由 json-server 实现, 具有分页，关键字搜索，排序等功能, 更多详情请参考[json-server](https://github.com/typicode/json-server)
 
