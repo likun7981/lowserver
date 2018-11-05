@@ -84,7 +84,7 @@ export default {
 export default {
 	// models 配置支持mockjs语法
 	models: {
-		"users|10": [("id|+1": 1), (name: "@cname"), (age: "@integer(10,30)")]
+		"users|10": [{"id|+1": 1, name: "@cname", age: "@integer(10,30)"}]
 	}
 };
 ```
